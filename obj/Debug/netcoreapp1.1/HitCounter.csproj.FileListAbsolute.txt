@@ -1,0 +1,8 @@
+d:\test\HitCounter\bin\Debug\netcoreapp1.1\HitCounter.deps.json
+d:\test\HitCounter\bin\Debug\netcoreapp1.1\HitCounter.runtimeconfig.json
+d:\test\HitCounter\bin\Debug\netcoreapp1.1\HitCounter.runtimeconfig.dev.json
+d:\test\HitCounter\obj\Debug\netcoreapp1.1\HitCounter.AssemblyInfo.cs
+d:\test\HitCounter\bin\Debug\netcoreapp1.1\HitCounter.dll
+d:\test\HitCounter\bin\Debug\netcoreapp1.1\HitCounter.pdb
+d:\test\HitCounter\obj\Debug\netcoreapp1.1\HitCounter.dll
+d:\test\HitCounter\obj\Debug\netcoreapp1.1\HitCounter.pdb
