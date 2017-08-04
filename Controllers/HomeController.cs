@@ -17,10 +17,19 @@ namespace HitCounter.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
-        {
-            var appState = _context.AppStates.FirstOrDefault(x => x.Id == 1);
-            var hitCount = ++appState.HitCount;
+        // public IActionResult Index()
+        // {            
+        //     var appState = _context.AppStates.FirstOrDefault(x => x.Id == 1);
+        //     var hitCount = appState.HitCount;
+        //     //_context.SaveChanges();
+        //     ViewData["HitCount"] = hitCount;
+        //     return View();
+        // }
+
+        public IActionResult Index([FromQuery] bool recordHit=false)
+        {            
+            var appState = _context.AppStates.FirstOrDefault(x => x.Id == 1);            
+            var hitCount = recordHit?++appState.HitCount:appState.HitCount;
             _context.SaveChanges();
             ViewData["HitCount"] = hitCount;
             return View();
