@@ -26,10 +26,13 @@ namespace HitCounter.Controllers
         //     return View();
         // }
 
-        public IActionResult Index([FromQuery] bool recordHit=false)
+        public IActionResult Index([FromQuery] bool recordHit=false, bool reset=false)
         {            
-            var appState = _context.AppStates.FirstOrDefault(x => x.Id == 1);            
-            var hitCount = recordHit?++appState.HitCount:appState.HitCount;
+            var appState = _context.AppStates.FirstOrDefault(x => x.Id == 1);
+            if(reset){
+                appState.HitCount = 0;
+            }
+            var hitCount =  recordHit?++appState.HitCount:appState.HitCount;
             _context.SaveChanges();
             ViewData["HitCount"] = hitCount;
             return View();
